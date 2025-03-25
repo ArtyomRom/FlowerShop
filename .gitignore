@@ -1,0 +1,10 @@
+# Кеши Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Виртуальное окружение
+venv/
+env/
+*.venv
+.idea

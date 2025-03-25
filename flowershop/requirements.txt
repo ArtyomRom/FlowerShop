@@ -1,0 +1,7 @@
+Django==5.1.7
+python-telegram-bot==22.0
+python-dotenv==1.0.1
+aiogram==3.19.0
+dateparser==1.2.1
+
+
