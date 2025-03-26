@@ -4,11 +4,7 @@ from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 inline_kb = InlineKeyboardMarkup(
     inline_keyboard=[
         [InlineKeyboardButton(text="Выбрать букет", callback_data="choose_flower")],
-        [
-            InlineKeyboardButton(
-                text="Связаться с флористом", callback_data="contact_florist"
-            )
-        ],
+        [InlineKeyboardButton(text="Связаться с флористом", callback_data="contact_florist")],
     ]
 )
 
@@ -16,11 +12,7 @@ inline_kb = InlineKeyboardMarkup(
 def get_occasion_keyboard():
     """Генерирует inline-клавиатуру с поводами"""
     buttons = [
-        [
-            InlineKeyboardButton(
-                text="🎂 День рождения", callback_data="occasion_birthday"
-            )
-        ],
+        [InlineKeyboardButton(text="🎂 День рождения", callback_data="occasion_birthday")],
         [InlineKeyboardButton(text="💍 Свадьба", callback_data="occasion_wedding")],
         [InlineKeyboardButton(text="🎒 В школу", callback_data="occasion_school")],
         [InlineKeyboardButton(text="💐 Без повода", callback_data="occasion_no_reason")],
