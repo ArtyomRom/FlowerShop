@@ -48,9 +48,13 @@ async def handle_other_occasion(callback: types.CallbackQuery, state: FSMContext
 async def process_custom_occasion(message: types.Message, state: FSMContext):
     user_occasion = message.text
     text = f"Спасибо! Вы указали повод: *{user_occasion}* 💐"
-    keyboard = keyboards.get_help_keyboard()
-    await message.answer(text, parse_mode="Markdown", reply_markup=keyboard)
-    await state.clear()
+    price_keyboard = keyboards.get_select_price()
+
+    await message.answer(text, parse_mode="Markdown", reply_markup=price_keyboard)
+    await state.set_state(CustomOccasionState.waiting_for_price)
+
+    # Сохраняем повод в состоянии
+    await state.update_data(occasion=user_occasion)
 
 
 @router.callback_query(lambda c: c.data == "consultation")
@@ -123,20 +127,17 @@ async def handle_occasion(callback: types.CallbackQuery, state: FSMContext):
 @router.callback_query(lambda c: c.data.startswith("price_"))
 async def handle_price_selection(callback: types.CallbackQuery, state: FSMContext):
     """Обработчик для выбора цены"""
-    price_key = callback.data.replace("price_", "")
+    price_key = callback.data.replace(
+        "price_", ""
+    )  # Получаем ключ цены из callback data
+    price_limit = int(price_key)  # Преобразуем в целое, если это нужно для фильтрации
 
-    # Получаем повод из состояния
-    user_data = await state.get_data()
-    user_occasion = user_data.get("occasion")
-
-    # Получаем букеты, которые соответствуют выбранному поводу и цене
-    bouquets = await sync_to_async(list)(
-        Bouquet.objects.filter(occasion=user_occasion, price__lte=price_key)
-    )
+    # Получаем букеты, которые соответствуют выбранной цене из всей коллекции
+    bouquets = await sync_to_async(list)(Bouquet.objects.filter(price__lte=price_limit))
 
     if not bouquets:
         await callback.message.answer(
-            f"К сожалению, нет букетов для повода {user_occasion} в этом диапазоне 😔"
+            f"К сожалению, нет букетов в этой ценовой категории 😔"
         )
         return
 
@@ -167,7 +168,7 @@ async def handle_price_selection(callback: types.CallbackQuery, state: FSMContex
                 )
             else:
                 await callback.message.answer(
-                    f"Изображение для букета {bouquet.name} не найдено!"
+                    f"Изображение для букета '{bouquet.name}' не найдено!"
                 )
         else:
             await callback.message.answer(
@@ -338,11 +339,10 @@ async def process_phone(message: types.Message, state: FSMContext):
     )
 
     await sync_to_async(Statistics.objects.create)(
-        customer_name=user,  
-        bouquet_name=bouquet, 
-        quantity=1,  
+        customer_name=user,
+        bouquet_name=bouquet,
+        quantity=1,
     )
-
 
     await message.answer(
         f"✅ Ваш заказ оформлен!\n💐 Букет: {bouquet.name}\n📦 Адрес: {user_data['address']}\n🕒 Время доставки: {user_data['delivery_time']}\n📱 Телефон: {message.text}"
