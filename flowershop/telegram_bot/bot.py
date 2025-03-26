@@ -1,7 +1,7 @@
 import os
 from aiogram import Bot, Dispatcher
 from dotenv import load_dotenv
-
+from telegram_bot.staticfiles import handlers
 # Загружаем переменные окружения
 load_dotenv()
 
