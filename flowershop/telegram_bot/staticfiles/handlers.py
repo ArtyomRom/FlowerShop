@@ -1,13 +1,14 @@
 import os
+
+import dateparser
 from aiogram import Router, types
 from aiogram.filters import CommandStart
+from aiogram.fsm.context import FSMContext
+from aiogram.fsm.state import State, StatesGroup
 from aiogram.types import FSInputFile, InlineKeyboardMarkup, InlineKeyboardButton
 from asgiref.sync import sync_to_async
 from shop.models import Bouquet, Customer, Order, Statistics, Consultation
 from telegram_bot.staticfiles import keyboards
-from aiogram.fsm.context import FSMContext
-from aiogram.fsm.state import State, StatesGroup
-import dateparser
 
 router = Router()
 
@@ -188,20 +189,21 @@ async def handle_price_selection(callback: types.CallbackQuery, state: FSMContex
             )
 
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-            [
-                InlineKeyboardButton(
-                    text="🌸 Заказать консультацию", callback_data="consultation"
-                )
-            ],
-            [
-                    InlineKeyboardButton(
-                    text='Посмотреть всю коллекцию', callback_data="all_bouquet"
-                )
-            ]
-            ])
+        [
+            InlineKeyboardButton(
+                text="🌸 Заказать консультацию", callback_data="consultation"
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                text='Посмотреть всю коллекцию', callback_data="all_bouquet"
+            )
+        ]
+    ])
     text = '*Хотите что-то еще более уникальное?*\nПодберите другой букет из нашей коллекции или закажите консультацию флориста'
     await callback.message.answer(text, parse_mode="Markdown", reply_markup=keyboard)
     await callback.answer()
+
 
 @router.callback_query(lambda c: c.data == "all_bouquet")
 async def show_all_bouquets(callback: types.CallbackQuery):
@@ -240,6 +242,7 @@ async def show_all_bouquets(callback: types.CallbackQuery):
             )
 
     await callback.answer()
+
 
 @router.callback_query(lambda c: c.data.startswith("bouquet_"))
 async def handle_bouquet_selection(callback: types.CallbackQuery):
@@ -353,21 +356,19 @@ async def process_name(message: types.Message, state: FSMContext):
 async def process_address(message: types.Message, state: FSMContext):
     """Сохранение адреса и запрос даты/времени"""
     await state.update_data(address=message.text)
-
-    await message.answer(
-        "Спасибо! Теперь введите дату и время доставки(в формате YYYY-MM-DD HH:MM):"
-    )
+    await message.answer("Спасибо! Теперь введите дату и время доставки (например, 10.04.2025 15:30):")
     await state.set_state(OrderState.waiting_for_delivery_time)
 
 
 @router.message(OrderState.waiting_for_delivery_time)
 async def process_delivery_time(message: types.Message, state: FSMContext):
-    parsed_date = dateparser.parse(message.text, languages=["ru"])
-    if not parsed_date:
+    delivery_time = message.text.strip()
+    # Проверяем, что указаны и дата, и время (например, "10.04.2025" → НЕТ времени)
+    if len(delivery_time.split()) == 1:
         await message.answer(
-            "Вы некорректно ввели данные. Пожалуйста, введите дату и время доставки(в формате YYYY-MM-DD HH:MM)"
-        )
+            "Пожалуйста, укажите не только дату, но и точное время доставки (например, 10.04.2025 15:30).")
         return
+    parsed_date = dateparser.parse(message.text, languages=["ru"])
     await state.update_data(delivery_time=parsed_date)
     await message.answer("Спасибо! Теперь введите ваш номер телефона:")
     await state.set_state(OrderState.waiting_for_phone)
