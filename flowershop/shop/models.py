@@ -40,7 +40,9 @@ class Bouquet(models.Model):
     occasion = models.CharField(
         max_length=255, choices=OCCASION_CHOICES, verbose_name="Повод"
     )
-
+    essence_bouquet = models.TextField(default="Нет заметок",
+                                       blank=True,
+                                       verbose_name='Смысл букета')
     def __str__(self):
         return f"{self.name} - {self.price} руб."
 

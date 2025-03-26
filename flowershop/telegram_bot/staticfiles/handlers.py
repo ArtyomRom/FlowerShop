@@ -155,14 +155,15 @@ async def handle_price_selection(callback: types.CallbackQuery, state: FSMContex
     # Отправка подходящих букетов
     for bouquet in bouquets:
         text = (
-            f"🌸 *{bouquet.name}*\n{bouquet.description}\n💰 Цена: {bouquet.price} руб."
+            f"🌸 *{bouquet.name}*\n{bouquet.description}\n💰 Цена: {bouquet.price} руб.\n✨*{bouquet.essence_bouquet}*"
         )
         keyboard = InlineKeyboardMarkup(
             inline_keyboard=[
                 [
                     InlineKeyboardButton(
                         text="✅ Выбрать этот букет",
-                        callback_data=f"bouquet_{bouquet.id}",
+                        callback_data=f"bouquet_{bouquet.id}"
+
                     )
                 ]
             ]
@@ -198,7 +199,7 @@ async def handle_price_selection(callback: types.CallbackQuery, state: FSMContex
                 )
             ]
             ])
-    text = 'Хотите что-то еще более уникальное? Подберите другой букет из нашей коллекции или закажите консультацию флориста'
+    text = '*Хотите что-то еще более уникальное?*\nПодберите другой букет из нашей коллекции или закажите консультацию флориста'
     await callback.message.answer(text, parse_mode="Markdown", reply_markup=keyboard)
     await callback.answer()
 
