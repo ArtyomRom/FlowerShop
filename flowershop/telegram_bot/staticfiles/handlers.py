@@ -186,8 +186,59 @@ async def handle_price_selection(callback: types.CallbackQuery, state: FSMContex
                 text, parse_mode="Markdown", reply_markup=keyboard
             )
 
+    keyboard = InlineKeyboardMarkup(inline_keyboard=[
+            [
+                InlineKeyboardButton(
+                    text="🌸 Заказать консультацию", callback_data="consultation"
+                )
+            ],
+            [
+                    InlineKeyboardButton(
+                    text='Посмотреть всю коллекцию', callback_data="all_bouquet"
+                )
+            ]
+            ])
+    text = 'Хотите что-то еще более уникальное? Подберите другой букет из нашей коллекции или закажите консультацию флориста'
+    await callback.message.answer(text, parse_mode="Markdown", reply_markup=keyboard)
     await callback.answer()
 
+@router.callback_query(lambda c: c.data == "all_bouquet")
+async def show_all_bouquets(callback: types.CallbackQuery):
+    bouquets = await sync_to_async(list)(Bouquet.objects.all())
+    for bouquet in bouquets:
+        text = (
+            f"🌸 *{bouquet.name}*\n{bouquet.description}\n💰 Цена: {bouquet.price} руб."
+        )
+        keyboard = InlineKeyboardMarkup(
+            inline_keyboard=[
+                [
+                    InlineKeyboardButton(
+                        text="✅ Выбрать этот букет",
+                        callback_data=f"bouquet_{bouquet.id}",
+                    )
+                ]
+            ]
+        )
+        if bouquet.image:
+            image_path = bouquet.image.path
+            if os.path.exists(image_path):
+                img_input = FSInputFile(image_path)
+                await callback.message.answer_photo(
+                    img_input,
+                    caption=text,
+                    parse_mode="Markdown",
+                    reply_markup=keyboard,
+                )
+            else:
+                await callback.message.answer(
+                    f"Изображение для букета {bouquet.name} не найдено!"
+                )
+        else:
+            await callback.message.answer(
+                text, parse_mode="Markdown", reply_markup=keyboard
+            )
+
+    await callback.answer()
 
 @router.callback_query(lambda c: c.data.startswith("bouquet_"))
 async def handle_bouquet_selection(callback: types.CallbackQuery):
