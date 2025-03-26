@@ -1,10 +1,9 @@
 import os
-
 from aiogram import Router, types
 from aiogram.filters import CommandStart
 from aiogram.types import FSInputFile, InlineKeyboardMarkup, InlineKeyboardButton
 from asgiref.sync import sync_to_async
-from shop.models import Bouquet, Customer, Order
+from shop.models import Bouquet, Customer, Order, Statistics
 from telegram_bot.staticfiles import keyboards
 from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import State, StatesGroup
@@ -16,7 +15,7 @@ router = Router()
 class CustomOccasionState(StatesGroup):
     waiting_for_custom_occasion = State()
     waiting_for_phone = State()
-    waiting_for_price = State()  # Новый шаг
+    waiting_for_price = State() 
 
 
 class OrderState(StatesGroup):
@@ -310,6 +309,13 @@ async def process_phone(message: types.Message, state: FSMContext):
         address=user_data["address"],
         delivery_time=user_data["delivery_time"],
         status="new",
+    )
+
+    # Создание записи в Statistics
+    await sync_to_async(Statistics.objects.create)(
+        customer_name=user,   # Ссылка на модель Customer
+        bouquet_name=bouquet,  # Ссылка на модель Bouquet
+        quantity=1,           # Укажите количество (например, 1)
     )
 
     # Подтверждение заказа

@@ -4,9 +4,9 @@ from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 def get_help_keyboard():
     buttons=[
         [InlineKeyboardButton(text="🌸 Заказать консультацию", callback_data="consultation")],
-        [InlineKeyboardButton(text="📚 Посмотреть всю коллекцию", callback_data="view_collection")],]
+        [InlineKeyboardButton(text="📚 Посмотреть всю коллекцию", callback_data="view_collection")],
+    ]
     return InlineKeyboardMarkup(inline_keyboard=buttons)
-
      
 
 def get_occasion_keyboard():
