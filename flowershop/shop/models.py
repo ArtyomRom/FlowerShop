@@ -119,3 +119,12 @@ class Statistics(models.Model):
     )
     quantity = models.PositiveIntegerField(verbose_name="Количество")
     order_date = models.DateTimeField(auto_now_add=True, verbose_name="Дата заказа")
+
+
+class Consultation(models.Model):
+    customer_name = models.CharField(max_length=255, verbose_name="Имя клиента")
+    phone = models.CharField(max_length=20, verbose_name="Телефон")
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name="Дата запроса")
+
+    def __str__(self):
+        return f"{self.customer_name} - {self.phone}"

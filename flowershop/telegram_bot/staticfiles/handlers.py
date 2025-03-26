@@ -3,7 +3,7 @@ from aiogram import Router, types
 from aiogram.filters import CommandStart
 from aiogram.types import FSInputFile, InlineKeyboardMarkup, InlineKeyboardButton
 from asgiref.sync import sync_to_async
-from shop.models import Bouquet, Customer, Order, Statistics
+from shop.models import Bouquet, Customer, Order, Statistics, Consultation
 from telegram_bot.staticfiles import keyboards
 from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import State, StatesGroup
@@ -15,7 +15,8 @@ router = Router()
 class CustomOccasionState(StatesGroup):
     waiting_for_custom_occasion = State()
     waiting_for_phone = State()
-    waiting_for_price = State() 
+    waiting_for_price = State()
+    waiting_for_contact_info = State()
 
 
 class OrderState(StatesGroup):
@@ -55,10 +56,38 @@ async def process_custom_occasion(message: types.Message, state: FSMContext):
 @router.callback_query(lambda c: c.data == "consultation")
 async def request_consultation(callback: types.CallbackQuery, state: FSMContext):
     await callback.message.answer(
-        "Пожалуйста, введите ваш номер телефона и наш администратор свяжется с вами в течение 20 минут"
+        "Пожалуйста, введите ваше имя и номер телефона, и наш администратор свяжется с вами в течение 20 минут."
     )
-    await state.set_state(CustomOccasionState.waiting_for_phone)
+    await state.set_state(
+        CustomOccasionState.waiting_for_contact_info
+    )  # Изменено состояние ожидания
     await callback.answer()
+
+
+@router.message(CustomOccasionState.waiting_for_contact_info)
+async def process_contact_info(message: types.Message, state: FSMContext):
+    """Сохранение информации о запросе на консультацию"""
+    contact_info = message.text.split()
+
+    if len(contact_info) < 2:
+        await message.answer(
+            "Пожалуйста, укажите ваше имя и номер телефона в формате: Имя Номер."
+        )
+        return
+
+    user_name = contact_info[0]
+    user_phone = contact_info[1]
+
+    # Создаем запись в модели Consultation
+    consultation = await sync_to_async(Consultation.objects.create)(
+        customer_name=user_name,  # Сохраняем имя клиента
+        phone=user_phone,  # Сохраняем номер телефона
+    )
+
+    await message.answer(
+        f"📝 Ваш запрос на консультацию успешно отправлен!\nИмя: {consultation.customer_name}\nТелефон: {consultation.phone}"
+    )
+    await state.clear()
 
 
 @router.message(CustomOccasionState.waiting_for_phone)
@@ -286,14 +315,12 @@ async def process_delivery_time(message: types.Message, state: FSMContext):
         )
         return
 
-    # Сохраняем дату/время в состоянии
     await state.update_data(delivery_time=parsed_date)
 
     await message.answer("Спасибо! Теперь введите ваш номер телефона:")
     await state.set_state(OrderState.waiting_for_phone)
 
 
-# Обработчик ввода номера телефона и создание заказа
 @router.message(OrderState.waiting_for_phone)
 async def process_phone(message: types.Message, state: FSMContext):
     """Сохранение номера телефона и финальное подтверждение заказа"""
@@ -302,7 +329,6 @@ async def process_phone(message: types.Message, state: FSMContext):
     user = await sync_to_async(Customer.objects.get)(id=user_data["user_id"])
     bouquet = await sync_to_async(Bouquet.objects.get)(id=user_data["bouquet_id"])
 
-    # Создание заказа
     order = await sync_to_async(Order.objects.create)(
         customer=user,
         bouquet=bouquet,
@@ -311,14 +337,13 @@ async def process_phone(message: types.Message, state: FSMContext):
         status="new",
     )
 
-    # Создание записи в Statistics
     await sync_to_async(Statistics.objects.create)(
-        customer_name=user,   # Ссылка на модель Customer
-        bouquet_name=bouquet,  # Ссылка на модель Bouquet
-        quantity=1,           # Укажите количество (например, 1)
+        customer_name=user,  
+        bouquet_name=bouquet, 
+        quantity=1,  
     )
 
-    # Подтверждение заказа
+
     await message.answer(
         f"✅ Ваш заказ оформлен!\n💐 Букет: {bouquet.name}\n📦 Адрес: {user_data['address']}\n🕒 Время доставки: {user_data['delivery_time']}\n📱 Телефон: {message.text}"
     )

@@ -1,7 +1,20 @@
 from django.contrib import admin
+from .models import (
+    Customer,
+    Bouquet,
+    Order,
+    Courier,
+    Florist,
+    Payment,
+    Statistics,
+    Consultation,
+)
 
-# Register your models here.
-from .models import Customer, Bouquet, Order, Courier, Florist, Payment, Statistics
+
+@admin.register(Consultation)
+class ConsultationAdmin(admin.ModelAdmin):
+    list_display = ("customer_name", "phone", "created_at")
+    list_filter = ("created_at",)
 
 
 @admin.register(Statistics)
