@@ -127,17 +127,28 @@ async def handle_occasion(callback: types.CallbackQuery, state: FSMContext):
 @router.callback_query(lambda c: c.data.startswith("price_"))
 async def handle_price_selection(callback: types.CallbackQuery, state: FSMContext):
     """Обработчик для выбора цены"""
-    price_key = callback.data.replace(
-        "price_", ""
-    )  # Получаем ключ цены из callback data
-    price_limit = int(price_key)  # Преобразуем в целое, если это нужно для фильтрации
+    price_key = callback.data.replace("price_", "")
 
-    # Получаем букеты, которые соответствуют выбранной цене из всей коллекции
-    bouquets = await sync_to_async(list)(Bouquet.objects.filter(price__lte=price_limit))
+    # Получаем данные из состояния
+    user_data = await state.get_data()
+    user_occasion = user_data.get("occasion")
+
+    if user_occasion and user_occasion not in ["wedding", "school"]:
+        # Если пользователь ввел свой повод
+        bouquets = await sync_to_async(list)(
+            Bouquet.objects.filter(price__lte=price_key).exclude(
+                occasion__in=["wedding", "school"]
+            )
+        )
+    else:
+        # Если пользователь выбрал стандартный повод
+        bouquets = await sync_to_async(list)(
+            Bouquet.objects.filter(occasion=user_occasion, price__lte=price_key)
+        )
 
     if not bouquets:
         await callback.message.answer(
-            f"К сожалению, нет букетов в этой ценовой категории 😔"
+            f"К сожалению, нет букетов для повода {user_occasion} в этом диапазоне 😔"
         )
         return
 
@@ -168,7 +179,7 @@ async def handle_price_selection(callback: types.CallbackQuery, state: FSMContex
                 )
             else:
                 await callback.message.answer(
-                    f"Изображение для букета '{bouquet.name}' не найдено!"
+                    f"Изображение для букета {bouquet.name} не найдено!"
                 )
         else:
             await callback.message.answer(
@@ -199,11 +210,6 @@ async def handle_bouquet_selection(callback: types.CallbackQuery):
             [
                 InlineKeyboardButton(
                     text="🌸 Заказать консультацию", callback_data="consultation"
-                )
-            ],
-            [
-                InlineKeyboardButton(
-                    text="📚 Посмотреть всю коллекцию", callback_data="view_collection"
                 )
             ],
         ]
@@ -302,22 +308,15 @@ async def process_address(message: types.Message, state: FSMContext):
     await state.set_state(OrderState.waiting_for_delivery_time)
 
 
-# Обработчик ввода даты и времени доставки
 @router.message(OrderState.waiting_for_delivery_time)
 async def process_delivery_time(message: types.Message, state: FSMContext):
-    """Сохранение даты/времени и запрос номера телефона"""
-    # Парсим дату и время
     parsed_date = dateparser.parse(message.text, languages=["ru"])
-
-    # Если дата не распознана, то выводим ошибку
     if not parsed_date:
         await message.answer(
             "Вы некорректно ввели данные. Пожалуйста, введите дату и время доставки(в формате YYYY-MM-DD HH:MM)"
         )
         return
-
     await state.update_data(delivery_time=parsed_date)
-
     await message.answer("Спасибо! Теперь введите ваш номер телефона:")
     await state.set_state(OrderState.waiting_for_phone)
 
