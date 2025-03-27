@@ -1,0 +1,2178 @@
+[
+  {
+    "model": "admin.logentry",
+    "pk": 72,
+    "fields": {
+      "action_time": "2025-03-26T19:53:32.169Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "28",
+      "object_repr": "Летнее солнце - 4000.00 руб.",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u043c\\u044b\\u0441\\u043b \\u0431\\u0443\\u043a\\u0435\\u0442\\u0430\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 71,
+    "fields": {
+      "action_time": "2025-03-26T19:53:22.504Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "27",
+      "object_repr": "Летнее напоминание - 4950.00 руб.",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u043c\\u044b\\u0441\\u043b \\u0431\\u0443\\u043a\\u0435\\u0442\\u0430\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 70,
+    "fields": {
+      "action_time": "2025-03-26T19:53:12.338Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "26",
+      "object_repr": "Осенний эссенс - 3600.00 руб.",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u043c\\u044b\\u0441\\u043b \\u0431\\u0443\\u043a\\u0435\\u0442\\u0430\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 69,
+    "fields": {
+      "action_time": "2025-03-26T19:52:59.985Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "25",
+      "object_repr": "Нежная симфония - 2700.00 руб.",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u043c\\u044b\\u0441\\u043b \\u0431\\u0443\\u043a\\u0435\\u0442\\u0430\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 68,
+    "fields": {
+      "action_time": "2025-03-26T19:52:49.970Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "24",
+      "object_repr": "Вечерняя гармония - 4100.00 руб.",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u043c\\u044b\\u0441\\u043b \\u0431\\u0443\\u043a\\u0435\\u0442\\u0430\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 67,
+    "fields": {
+      "action_time": "2025-03-26T19:52:38.752Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "23",
+      "object_repr": "Новое начало - 3300.00 руб.",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u043c\\u044b\\u0441\\u043b \\u0431\\u0443\\u043a\\u0435\\u0442\\u0430\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 66,
+    "fields": {
+      "action_time": "2025-03-26T19:52:25.437Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "22",
+      "object_repr": "Успех на горизонте - 1850.00 руб.",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u043c\\u044b\\u0441\\u043b \\u0431\\u0443\\u043a\\u0435\\u0442\\u0430\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 65,
+    "fields": {
+      "action_time": "2025-03-26T19:52:13.213Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "21",
+      "object_repr": "Цветные знания - 3150.00 руб.",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u043c\\u044b\\u0441\\u043b \\u0431\\u0443\\u043a\\u0435\\u0442\\u0430\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 64,
+    "fields": {
+      "action_time": "2025-03-26T19:52:02.427Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "20",
+      "object_repr": "Уроки радости - 3100.00 руб.",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u043c\\u044b\\u0441\\u043b \\u0431\\u0443\\u043a\\u0435\\u0442\\u0430\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 63,
+    "fields": {
+      "action_time": "2025-03-26T19:51:51.357Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "19",
+      "object_repr": "Знания и успех - 3400.00 руб.",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u043c\\u044b\\u0441\\u043b \\u0431\\u0443\\u043a\\u0435\\u0442\\u0430\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 62,
+    "fields": {
+      "action_time": "2025-03-26T19:51:39.711Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "12",
+      "object_repr": "Летний сад - 1900.00 руб.",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u043c\\u044b\\u0441\\u043b \\u0431\\u0443\\u043a\\u0435\\u0442\\u0430\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 61,
+    "fields": {
+      "action_time": "2025-03-26T19:51:26.963Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "11",
+      "object_repr": "Очарование - 2000.00 руб.",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u043c\\u044b\\u0441\\u043b \\u0431\\u0443\\u043a\\u0435\\u0442\\u0430\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 60,
+    "fields": {
+      "action_time": "2025-03-26T19:51:16.119Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "10",
+      "object_repr": "Нежный роман - 2800.00 руб.",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u043c\\u044b\\u0441\\u043b \\u0431\\u0443\\u043a\\u0435\\u0442\\u0430\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 59,
+    "fields": {
+      "action_time": "2025-03-26T19:50:59.464Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "9",
+      "object_repr": "Солнечный всплеск - 2700.00 руб.",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u043c\\u044b\\u0441\\u043b \\u0431\\u0443\\u043a\\u0435\\u0442\\u0430\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 58,
+    "fields": {
+      "action_time": "2025-03-26T19:50:43.842Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "8",
+      "object_repr": "Летний Ветер - 1900.00 руб.",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u043c\\u044b\\u0441\\u043b \\u0431\\u0443\\u043a\\u0435\\u0442\\u0430\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 57,
+    "fields": {
+      "action_time": "2025-03-26T19:50:31.658Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "7",
+      "object_repr": "ЛЕТНЯЯ РОСА - 2605.00 руб.",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u043c\\u044b\\u0441\\u043b \\u0431\\u0443\\u043a\\u0435\\u0442\\u0430\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 56,
+    "fields": {
+      "action_time": "2025-03-26T19:50:19.793Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "6",
+      "object_repr": "ШИШКИ В ЛЕСУ - 2500.00 руб.",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u043c\\u044b\\u0441\\u043b \\u0431\\u0443\\u043a\\u0435\\u0442\\u0430\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 55,
+    "fields": {
+      "action_time": "2025-03-26T19:50:08.310Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "5",
+      "object_repr": "СТРЕЛИЦИЯ - 1200.00 руб.",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u043c\\u044b\\u0441\\u043b \\u0431\\u0443\\u043a\\u0435\\u0442\\u0430\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 54,
+    "fields": {
+      "action_time": "2025-03-26T19:49:54.005Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "4",
+      "object_repr": "ВОСХОД СОЛНЦА - 2420.00 руб.",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u043c\\u044b\\u0441\\u043b \\u0431\\u0443\\u043a\\u0435\\u0442\\u0430\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 53,
+    "fields": {
+      "action_time": "2025-03-26T19:49:36.404Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "3",
+      "object_repr": "АФРО-ШИШКА - 1990.00 руб.",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u043c\\u044b\\u0441\\u043b \\u0431\\u0443\\u043a\\u0435\\u0442\\u0430\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 52,
+    "fields": {
+      "action_time": "2025-03-26T19:49:23.643Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "2",
+      "object_repr": "БАБОЧКИ НА ПОЛЯНЕ - 2800.00 руб.",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u043c\\u044b\\u0441\\u043b \\u0431\\u0443\\u043a\\u0435\\u0442\\u0430\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 51,
+    "fields": {
+      "action_time": "2025-03-26T19:49:08.905Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "1",
+      "object_repr": "ЯРКИЙ СОН - 4990.00 руб.",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u043c\\u044b\\u0441\\u043b \\u0431\\u0443\\u043a\\u0435\\u0442\\u0430\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 50,
+    "fields": {
+      "action_time": "2025-03-26T13:18:17.264Z",
+      "user": 2,
+      "content_type": 13,
+      "object_id": "1",
+      "object_repr": "Statistics object (1)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 49,
+    "fields": {
+      "action_time": "2025-03-26T12:46:12.049Z",
+      "user": 2,
+      "content_type": 7,
+      "object_id": "11",
+      "object_repr": "Очарование - 2000 руб.",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0426\\u0435\\u043d\\u0430\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 48,
+    "fields": {
+      "action_time": "2025-03-26T12:46:05.106Z",
+      "user": 2,
+      "content_type": 7,
+      "object_id": "3",
+      "object_repr": "АФРО-ШИШКА - 1990 руб.",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0426\\u0435\\u043d\\u0430\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 47,
+    "fields": {
+      "action_time": "2025-03-26T12:45:53.542Z",
+      "user": 2,
+      "content_type": 7,
+      "object_id": "19",
+      "object_repr": "Знания и успех - 3400 руб.",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0426\\u0435\\u043d\\u0430\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 46,
+    "fields": {
+      "action_time": "2025-03-26T12:45:46.227Z",
+      "user": 2,
+      "content_type": 7,
+      "object_id": "8",
+      "object_repr": "Летний Ветер - 1900 руб.",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0426\\u0435\\u043d\\u0430\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 45,
+    "fields": {
+      "action_time": "2025-03-26T12:45:38.238Z",
+      "user": 2,
+      "content_type": 7,
+      "object_id": "5",
+      "object_repr": "СТРЕЛИЦИЯ - 1200 руб.",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0426\\u0435\\u043d\\u0430\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 44,
+    "fields": {
+      "action_time": "2025-03-26T12:45:25.920Z",
+      "user": 2,
+      "content_type": 7,
+      "object_id": "1",
+      "object_repr": "ЯРКИЙ СОН - 4990 руб.",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0426\\u0435\\u043d\\u0430\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 43,
+    "fields": {
+      "action_time": "2025-03-26T12:45:16.612Z",
+      "user": 2,
+      "content_type": 7,
+      "object_id": "22",
+      "object_repr": "Успех на горизонте - 1850 руб.",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0426\\u0435\\u043d\\u0430\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 42,
+    "fields": {
+      "action_time": "2025-03-26T12:45:08.805Z",
+      "user": 2,
+      "content_type": 7,
+      "object_id": "12",
+      "object_repr": "Летний сад - 1900 руб.",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0426\\u0435\\u043d\\u0430\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 41,
+    "fields": {
+      "action_time": "2025-03-26T12:45:01.153Z",
+      "user": 2,
+      "content_type": 7,
+      "object_id": "27",
+      "object_repr": "Летнее напоминание - 4950.00 руб.",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0426\\u0435\\u043d\\u0430\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 40,
+    "fields": {
+      "action_time": "2025-03-26T12:44:52.270Z",
+      "user": 2,
+      "content_type": 7,
+      "object_id": "21",
+      "object_repr": "Цветные знания - 3150 руб.",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0426\\u0435\\u043d\\u0430\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+      "action_time": "2025-03-26T09:28:56.410Z",
+      "user": 2,
+      "content_type": 7,
+      "object_id": "18",
+      "object_repr": "Флоресcence - 2750.00 руб.",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+      "action_time": "2025-03-26T09:28:56.410Z",
+      "user": 2,
+      "content_type": 7,
+      "object_id": "17",
+      "object_repr": "Любовь и счастье - 3550.00 руб.",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 36,
+    "fields": {
+      "action_time": "2025-03-26T09:28:56.410Z",
+      "user": 2,
+      "content_type": 7,
+      "object_id": "16",
+      "object_repr": "Фейерверк цветов - 2900.00 руб.",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 37,
+    "fields": {
+      "action_time": "2025-03-26T09:28:56.410Z",
+      "user": 2,
+      "content_type": 7,
+      "object_id": "15",
+      "object_repr": "Вдохновение - 3200.00 руб.",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 38,
+    "fields": {
+      "action_time": "2025-03-26T09:28:56.410Z",
+      "user": 2,
+      "content_type": 7,
+      "object_id": "14",
+      "object_repr": "Солнечное настроение - 30000.00 руб.",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 39,
+    "fields": {
+      "action_time": "2025-03-26T09:28:56.410Z",
+      "user": 2,
+      "content_type": 7,
+      "object_id": "13",
+      "object_repr": "Радуга эмоций - 2850.00 руб.",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+      "action_time": "2025-03-26T08:12:50.478Z",
+      "user": 2,
+      "content_type": 7,
+      "object_id": "28",
+      "object_repr": "Летнее солнце - 4000 руб.",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+      "action_time": "2025-03-26T08:10:12.217Z",
+      "user": 2,
+      "content_type": 7,
+      "object_id": "27",
+      "object_repr": "Летнее напоминание - 2950 руб.",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+      "action_time": "2025-03-26T08:05:13.557Z",
+      "user": 2,
+      "content_type": 7,
+      "object_id": "26",
+      "object_repr": "Осенний эссенс - 3600 руб.",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+      "action_time": "2025-03-26T08:03:38.909Z",
+      "user": 2,
+      "content_type": 7,
+      "object_id": "25",
+      "object_repr": "Нежная симфония - 2700 руб.",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+      "action_time": "2025-03-26T08:03:01.616Z",
+      "user": 2,
+      "content_type": 7,
+      "object_id": "24",
+      "object_repr": "Вечерняя гармония - 4100 руб.",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+      "action_time": "2025-03-26T07:59:56.197Z",
+      "user": 2,
+      "content_type": 7,
+      "object_id": "23",
+      "object_repr": "Новое начало - 3300 руб.",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+      "action_time": "2025-03-26T07:58:42.629Z",
+      "user": 2,
+      "content_type": 7,
+      "object_id": "22",
+      "object_repr": "Успех на горизонте - 2800 руб.",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+      "action_time": "2025-03-26T07:56:36.336Z",
+      "user": 2,
+      "content_type": 7,
+      "object_id": "21",
+      "object_repr": "Цветные знания - 2950 руб.",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+      "action_time": "2025-03-26T07:55:24.098Z",
+      "user": 2,
+      "content_type": 7,
+      "object_id": "20",
+      "object_repr": "Уроки радости - 3100 руб.",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+      "action_time": "2025-03-26T07:53:57.809Z",
+      "user": 2,
+      "content_type": 7,
+      "object_id": "19",
+      "object_repr": "Знания и успех - 2400 руб.",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+      "action_time": "2025-03-26T07:49:17.998Z",
+      "user": 2,
+      "content_type": 7,
+      "object_id": "18",
+      "object_repr": "Флоресcence - 2750 руб.",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+      "action_time": "2025-03-26T07:48:40.147Z",
+      "user": 2,
+      "content_type": 7,
+      "object_id": "17",
+      "object_repr": "Любовь и счастье - 3550 руб.",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+      "action_time": "2025-03-26T07:47:56.867Z",
+      "user": 2,
+      "content_type": 7,
+      "object_id": "16",
+      "object_repr": "Фейерверк цветов - 2900 руб.",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+      "action_time": "2025-03-26T07:47:10.884Z",
+      "user": 2,
+      "content_type": 7,
+      "object_id": "15",
+      "object_repr": "Вдохновение - 3200 руб.",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+      "action_time": "2025-03-26T07:46:33.288Z",
+      "user": 2,
+      "content_type": 7,
+      "object_id": "14",
+      "object_repr": "Солнечное настроение - 30000 руб.",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+      "action_time": "2025-03-26T07:45:43.895Z",
+      "user": 2,
+      "content_type": 7,
+      "object_id": "13",
+      "object_repr": "Радуга эмоций - 2850 руб.",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+      "action_time": "2025-03-26T07:35:50.164Z",
+      "user": 2,
+      "content_type": 7,
+      "object_id": "12",
+      "object_repr": "Летний сад - 2550 руб.",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+      "action_time": "2025-03-26T07:34:56.736Z",
+      "user": 2,
+      "content_type": 7,
+      "object_id": "8",
+      "object_repr": "Летний Ветер - 2500.00 руб.",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e \\u0431\\u0443\\u043a\\u0435\\u0442\\u0430\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+      "action_time": "2025-03-26T07:34:46.614Z",
+      "user": 2,
+      "content_type": 7,
+      "object_id": "9",
+      "object_repr": "Солнечный всплеск - 2700.00 руб.",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e \\u0431\\u0443\\u043a\\u0435\\u0442\\u0430\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+      "action_time": "2025-03-26T07:34:35.141Z",
+      "user": 2,
+      "content_type": 7,
+      "object_id": "10",
+      "object_repr": "Нежный роман - 2800.00 руб.",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e \\u0431\\u0443\\u043a\\u0435\\u0442\\u0430\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+      "action_time": "2025-03-26T07:34:11.097Z",
+      "user": 2,
+      "content_type": 7,
+      "object_id": "11",
+      "object_repr": "Очарование - 2650.00 руб.",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e \\u0431\\u0443\\u043a\\u0435\\u0442\\u0430\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+      "action_time": "2025-03-26T07:32:33.786Z",
+      "user": 2,
+      "content_type": 7,
+      "object_id": "11",
+      "object_repr": "Очарование - 2650 руб.",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+      "action_time": "2025-03-26T07:31:31.039Z",
+      "user": 2,
+      "content_type": 7,
+      "object_id": "10",
+      "object_repr": "Нежный роман - 2800.00 руб.",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+      "action_time": "2025-03-26T07:31:28.042Z",
+      "user": 2,
+      "content_type": 7,
+      "object_id": "10",
+      "object_repr": "Нежный роман - 2800 руб.",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+      "action_time": "2025-03-26T07:30:38.898Z",
+      "user": 2,
+      "content_type": 7,
+      "object_id": "9",
+      "object_repr": "Солнечный всплеск - 2700 руб.",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+      "action_time": "2025-03-26T07:29:34.360Z",
+      "user": 2,
+      "content_type": 7,
+      "object_id": "8",
+      "object_repr": "Летний Ветер - 2500.00 руб.",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+      "action_time": "2025-03-25T15:24:15.814Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "7",
+      "object_repr": "ЛЕТНЯЯ РОСА - 2605 руб.",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+      "action_time": "2025-03-25T14:57:38.829Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "6",
+      "object_repr": "ШИШКИ В ЛЕСУ - 2500 руб.",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+      "action_time": "2025-03-25T14:56:55.429Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "5",
+      "object_repr": "СТРЕЛИЦИЯ - 2460 руб.",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+      "action_time": "2025-03-25T14:56:11.261Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "4",
+      "object_repr": "ВОСХОД СОЛНЦА - 2420 руб.",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+      "action_time": "2025-03-25T14:55:25.891Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "3",
+      "object_repr": "АФРО-ШИШКА - 2250 руб.",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+      "action_time": "2025-03-25T14:54:27.418Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "2",
+      "object_repr": "БАБОЧКИ НА ПОЛЯНЕ - 2800 руб.",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+      "action_time": "2025-03-25T14:53:34.534Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "1",
+      "object_repr": "ЯРКИЙ СОН - 5540 руб.",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+      "name": "Can add log entry",
+      "content_type": 1,
+      "codename": "add_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+      "name": "Can change log entry",
+      "content_type": 1,
+      "codename": "change_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+      "name": "Can delete log entry",
+      "content_type": 1,
+      "codename": "delete_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+      "name": "Can view log entry",
+      "content_type": 1,
+      "codename": "view_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+      "name": "Can add group",
+      "content_type": 3,
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+      "name": "Can change group",
+      "content_type": 3,
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+      "name": "Can delete group",
+      "content_type": 3,
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+      "name": "Can view group",
+      "content_type": 3,
+      "codename": "view_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+      "name": "Can add permission",
+      "content_type": 2,
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+      "name": "Can change permission",
+      "content_type": 2,
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+      "name": "Can delete permission",
+      "content_type": 2,
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+      "name": "Can view permission",
+      "content_type": 2,
+      "codename": "view_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+      "name": "Can add user",
+      "content_type": 4,
+      "codename": "add_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+      "name": "Can change user",
+      "content_type": 4,
+      "codename": "change_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+      "name": "Can delete user",
+      "content_type": 4,
+      "codename": "delete_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+      "name": "Can view user",
+      "content_type": 4,
+      "codename": "view_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+      "name": "Can add content type",
+      "content_type": 5,
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+      "name": "Can change content type",
+      "content_type": 5,
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": 5,
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+      "name": "Can view content type",
+      "content_type": 5,
+      "codename": "view_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+      "name": "Can add session",
+      "content_type": 6,
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+      "name": "Can change session",
+      "content_type": 6,
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+      "name": "Can delete session",
+      "content_type": 6,
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+      "name": "Can view session",
+      "content_type": 6,
+      "codename": "view_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+      "name": "Can add bouquet",
+      "content_type": 7,
+      "codename": "add_bouquet"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+      "name": "Can change bouquet",
+      "content_type": 7,
+      "codename": "change_bouquet"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+      "name": "Can delete bouquet",
+      "content_type": 7,
+      "codename": "delete_bouquet"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+      "name": "Can view bouquet",
+      "content_type": 7,
+      "codename": "view_bouquet"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 53,
+    "fields": {
+      "name": "Can add consultation",
+      "content_type": 14,
+      "codename": "add_consultation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 54,
+    "fields": {
+      "name": "Can change consultation",
+      "content_type": 14,
+      "codename": "change_consultation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 55,
+    "fields": {
+      "name": "Can delete consultation",
+      "content_type": 14,
+      "codename": "delete_consultation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 56,
+    "fields": {
+      "name": "Can view consultation",
+      "content_type": 14,
+      "codename": "view_consultation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+      "name": "Can add courier",
+      "content_type": 8,
+      "codename": "add_courier"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+      "name": "Can change courier",
+      "content_type": 8,
+      "codename": "change_courier"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+      "name": "Can delete courier",
+      "content_type": 8,
+      "codename": "delete_courier"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+      "name": "Can view courier",
+      "content_type": 8,
+      "codename": "view_courier"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+      "name": "Can add customer",
+      "content_type": 9,
+      "codename": "add_customer"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+      "name": "Can change customer",
+      "content_type": 9,
+      "codename": "change_customer"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+      "name": "Can delete customer",
+      "content_type": 9,
+      "codename": "delete_customer"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+      "name": "Can view customer",
+      "content_type": 9,
+      "codename": "view_customer"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+      "name": "Can add florist",
+      "content_type": 10,
+      "codename": "add_florist"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+      "name": "Can change florist",
+      "content_type": 10,
+      "codename": "change_florist"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+      "name": "Can delete florist",
+      "content_type": 10,
+      "codename": "delete_florist"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+      "name": "Can view florist",
+      "content_type": 10,
+      "codename": "view_florist"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+      "name": "Can add order",
+      "content_type": 11,
+      "codename": "add_order"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+      "name": "Can change order",
+      "content_type": 11,
+      "codename": "change_order"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+      "name": "Can delete order",
+      "content_type": 11,
+      "codename": "delete_order"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+      "name": "Can view order",
+      "content_type": 11,
+      "codename": "view_order"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+      "name": "Can add payment",
+      "content_type": 12,
+      "codename": "add_payment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+      "name": "Can change payment",
+      "content_type": 12,
+      "codename": "change_payment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+      "name": "Can delete payment",
+      "content_type": 12,
+      "codename": "delete_payment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+      "name": "Can view payment",
+      "content_type": 12,
+      "codename": "view_payment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 49,
+    "fields": {
+      "name": "Can add statistics",
+      "content_type": 13,
+      "codename": "add_statistics"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 50,
+    "fields": {
+      "name": "Can change statistics",
+      "content_type": 13,
+      "codename": "change_statistics"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 51,
+    "fields": {
+      "name": "Can delete statistics",
+      "content_type": 13,
+      "codename": "delete_statistics"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 52,
+    "fields": {
+      "name": "Can view statistics",
+      "content_type": 13,
+      "codename": "view_statistics"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$870000$qgHOKAhzdHv4w05xUFGF9H$Tfem4+IRq244+mU4J3d8nE9GEJotpek5Kv7UCSjMKQg=",
+      "last_login": "2025-03-26T19:38:29.574Z",
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2025-03-24T17:11:46.024Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$870000$lxWRTUtRdVWEjNM4YhqSJc$nVgMtTKresvm2SNeJgBvO9uB6yiSXv7RFUd+TdPuG6U=",
+      "last_login": "2025-03-25T18:27:19.887Z",
+      "is_superuser": true,
+      "username": "anyu",
+      "first_name": "",
+      "last_name": "",
+      "email": "anyu.kutilez@mail.ru",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2025-03-25T18:27:05.306Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "eq1dq4n8j0ufj1qux1sq5br203ndn8bn",
+    "fields": {
+      "session_data": ".eJxVjEEOwiAQRe_C2hBgmAou3fcMZAaoVA0kpV0Z765NutDtf-_9lwi0rSVsPS9hTuIitDj9bkzxkesO0p3qrcnY6rrMLHdFHrTLsaX8vB7u30GhXr41uQgRlHEKEVlH70hpY43PkNA6HBTAxBY9Kg2TB0pnRm8hEoMagMT7A7DqNp4:1twlLT:qKS8sKzMXj6-24sJpT-M6RTzsj-5_4TsaMVTokDf2B4",
+      "expire_date": "2025-04-07T17:12:15.333Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "ug3rnqs0r7pm6c9ub3xq1oyfsth2dld9",
+    "fields": {
+      "session_data": ".eJxVjDsOwyAQBe9CHSFg-aZM7zOghYXgJLIlY1dR7h5bcpG0M_Pem0Xc1ha3XpY4ErsyxS6_LGF-lukQ9MDpPvM8T-syJn4k_LSdDzOV1-1s_w4a9ravIVgkkQWELMEKkrUC2JrAkpFeOkc-a6e80OS1QOODUkDOhR2iTIZ9vr-BNoc:1tx8zf:qGEdbcwFAh77a-nbS3_QnsU59tWHta_Ajcm4ZfFipQo",
+      "expire_date": "2025-04-08T18:27:19.901Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "c3dj4yuwzljy361qvzdl4zyfl1o1xttf",
+    "fields": {
+      "session_data": ".eJxVjEEOwiAQRe_C2hBgmAou3fcMZAaoVA0kpV0Z765NutDtf-_9lwi0rSVsPS9hTuIitDj9bkzxkesO0p3qrcnY6rrMLHdFHrTLsaX8vB7u30GhXr41uQgRlHEKEVlH70hpY43PkNA6HBTAxBY9Kg2TB0pnRm8hEoMagMT7A7DqNp4:1txWa5:h5PVM5an26GP7mTMRsxisRCVPxtx3yrlHP8BgTj5iOE",
+      "expire_date": "2025-04-09T19:38:29.578Z"
+    }
+  },
+  {
+    "model": "shop.customer",
+    "pk": 1,
+    "fields": {
+      "tg_id": 852678500,
+      "name": "Artem",
+      "phone": null,
+      "created_at": "2025-03-25T16:53:29.653Z"
+    }
+  },
+  {
+    "model": "shop.customer",
+    "pk": 2,
+    "fields": {
+      "tg_id": 1451904827,
+      "name": "fyf",
+      "phone": null,
+      "created_at": "2025-03-25T18:59:18.644Z"
+    }
+  },
+  {
+    "model": "shop.customer",
+    "pk": 3,
+    "fields": {
+      "tg_id": 1222857171,
+      "name": "Амир",
+      "phone": null,
+      "created_at": "2025-03-26T17:27:42.551Z"
+    }
+  },
+  {
+    "model": "shop.customer",
+    "pk": 4,
+    "fields": {
+      "tg_id": 927974087,
+      "name": "Роман",
+      "phone": null,
+      "created_at": "2025-03-26T18:08:39.805Z"
+    }
+  },
+  {
+    "model": "shop.bouquet",
+    "pk": 1,
+    "fields": {
+      "name": "ЯРКИЙ СОН",
+      "description": "Лилия 5 Бутонов — 5 шт\r\nЭустома — 5 шт\r\nСтатица — 2 шт\r\nТюльпан — 7 шт\r\nЦикас — 2 шт\r\nГипсофила — 4 шт\r\nСалал — 0,5 упаковки\r\nЭвкалипт — 1 шт\r\nКорзина\r\nОазис",
+      "image": "bouquets/Яркий_сон.jpg",
+      "price": "4990.00",
+      "occasion": "birthday",
+      "essence_bouquet": "ЯРКИЙ СОН – этот букет символизирует смелые мечты и яркие впечатления. Как красочный сон, он наполнен необычными сочетаниями цветов, создающими эффект волшебства."
+    }
+  },
+  {
+    "model": "shop.bouquet",
+    "pk": 2,
+    "fields": {
+      "name": "БАБОЧКИ НА ПОЛЯНЕ",
+      "description": "Роза mix — 60 шт\r\nГипсофила — 2 шт\r\nБабочки — 3 шт\r\nУпаковка — фетр\r\nЛента",
+      "image": "bouquets/Бабочка_на_поляне.jpg",
+      "price": "2800.00",
+      "occasion": "birthday",
+      "essence_bouquet": "БАБОЧКИ НА ПОЛЯНЕ – легкость, свобода и радость. Такой букет напоминает теплый летний день, когда бабочки беззаботно порхают среди цветущих лугов."
+    }
+  },
+  {
+    "model": "shop.bouquet",
+    "pk": 3,
+    "fields": {
+      "name": "АФРО-ШИШКА",
+      "description": "Леукоспермум — 4 шт\r\nЦикас — 1 шт\r\nАнанас — 1 шт\r\nРускус ( Италия ) — 1 шт\r\nБожьи коровки — 5 шт\r\nУпаковка — Рогожка\r\nЛента — Атлас",
+      "image": "bouquets/Афро_шишка.jpg",
+      "price": "1990.00",
+      "occasion": "birthday",
+      "essence_bouquet": "АФРО-ШИШКА – символ экзотики и природной красоты. В этом букете собраны редкие, необычные цветы с богатой фактурой и яркими акцентами."
+    }
+  },
+  {
+    "model": "shop.bouquet",
+    "pk": 4,
+    "fields": {
+      "name": "ВОСХОД СОЛНЦА",
+      "description": "Роза mix — 39 шт\r\nСалал — 1 упаковка\r\nЛеукоспермум — 1 шт\r\nУпаковка — сетка\r\nЛента",
+      "image": "bouquets/Восход_солнца.jpg",
+      "price": "2420.00",
+      "occasion": "birthday",
+      "essence_bouquet": "ВОСХОД СОЛНЦА – свежесть нового дня, надежда и энергия. Цвета в букете передают переливы утреннего неба от нежного розового до золотистого."
+    }
+  },
+  {
+    "model": "shop.bouquet",
+    "pk": 5,
+    "fields": {
+      "name": "СТРЕЛИЦИЯ",
+      "description": "Стрелиция — 3 шт\r\nЛист Стрелиции — 3 шт\r\nСафари кустовая — 2 шт\r\nПиттоспорум — 1 шт\r\nБерграс\r\nСухоцветы\r\nУпаковка — сетка натуральная\r\nЛента",
+      "image": "bouquets/СТРЕЛИЦИЯ.jpg",
+      "price": "1200.00",
+      "occasion": "birthday",
+      "essence_bouquet": "СТРЕЛИЦИЯ – символ независимости, силы и утонченной экзотики. Как одноименный цветок, этот букет выделяется своей выразительностью и яркостью."
+    }
+  },
+  {
+    "model": "shop.bouquet",
+    "pk": 6,
+    "fields": {
+      "name": "ШИШКИ В ЛЕСУ",
+      "description": "Леукоспермум — 3 шт\r\nХризантема Сантини — 5 шт\r\nСтатица — 1 шт\r\nГипсофила — 1 шт\r\nТюльпан — 5 шт\r\nСалал — 0,5 упаковки\r\nЭустома — 2 шт\r\nМатериал — Рогожка\r\nЛента",
+      "image": "bouquets/ШИШКИ_В_ЛЕСУ.jpg",
+      "price": "2500.00",
+      "occasion": "birthday",
+      "essence_bouquet": "ШИШКИ В ЛЕСУ – воплощение уюта, природной гармонии и спокойствия. Этот букет напоминает прогулку по осеннему лесу, где в воздухе витает запах хвои и свежести."
+    }
+  },
+  {
+    "model": "shop.bouquet",
+    "pk": 7,
+    "fields": {
+      "name": "ЛЕТНЯЯ РОСА",
+      "description": "Лиатрис — 3 шт\r\nХризантема Сантини — 5 шт\r\nТриферн — 2 шт\r\nЭустома — 3 шт\r\nГербера — 3 шт\r\nАспедистра — 4 шт\r\nБожьи коровки — 3 шт\r\nУпаковка — Органза\r\nЛента",
+      "image": "bouquets/Летняя_роса.jpg",
+      "price": "2605.00",
+      "occasion": "birthday",
+      "essence_bouquet": "ЛЕТНЯЯ РОСА – символ чистоты и нежности. Как утренние капли росы на лепестках, этот букет придаст ощущение свежести и легкости."
+    }
+  },
+  {
+    "model": "shop.bouquet",
+    "pk": 8,
+    "fields": {
+      "name": "Летний Ветер",
+      "description": "Лиатрис — 3 шт\r\nХризантема Сантини — 5 шт\r\nТриферн — 3 шт\r\nЭустома — 2 шт\r\nГербера — 4 шт\r\nАспедистра — 3 шт\r\nБожьи коровки — 1 шт\r\nУпаковка: Сетка\r\nЛента",
+      "image": "bouquets/Летний_ветер_YG9Bxnq.jpg",
+      "price": "1900.00",
+      "occasion": "wedding",
+      "essence_bouquet": "Летний Ветер – свобода, движение и легкость. В этом букете сочетаются воздушные цветы, передающие ощущение теплого ветра, гуляющего по полям."
+    }
+  },
+  {
+    "model": "shop.bouquet",
+    "pk": 9,
+    "fields": {
+      "name": "Солнечный всплеск",
+      "description": "Лиатрис — 2 шт\r\nХризантема Сантини — 4 шт\r\nТриферн — 3 шт\r\nЭустома — 2 шт\r\nГербера — 5 шт\r\nАспедистра — 2 шт\r\nБожьи коровки — 1 шт\r\nУпаковка: Крафт\r\nЛента",
+      "image": "bouquets/Солнечный_всплеск_Eazvdep.jpg",
+      "price": "2700.00",
+      "occasion": "wedding",
+      "essence_bouquet": "Солнечный всплеск – радость, позитив и энергия. Яркие оттенки передают взрыв солнечного света, согревающего сердце."
+    }
+  },
+  {
+    "model": "shop.bouquet",
+    "pk": 10,
+    "fields": {
+      "name": "Нежный роман",
+      "description": "Лиатрис — 5 шт\r\nХризантема Сантини — 2 шт\r\nТриферн — 3 шт\r\nЭустома — 1 шт\r\nГербера — 4 шт\r\nАспедстра — 2 шт\r\nБожьи коровки — 3 шт\r\nУпаковка: Платок\r\nЛента",
+      "image": "bouquets/Нежный_роман_wm30XOc.jpg",
+      "price": "2800.00",
+      "occasion": "wedding",
+      "essence_bouquet": "Нежный роман – символ любви, заботы и романтики. Лепестки цветов словно страницы красивой истории, наполненной чувственностью."
+    }
+  },
+  {
+    "model": "shop.bouquet",
+    "pk": 11,
+    "fields": {
+      "name": "Очарование",
+      "description": "Лиатрис — 2 шт\r\nХризантема Сантини — 6 шт\r\nТриферн — 2 шт\r\nЭустома — 3 шт\r\nГербера — 3 шт\r\nАспедистра — 3 шт\r\nБожьи коровки — 2 шт\r\nУпаковка: Фоамиран\r\nЛента",
+      "image": "bouquets/Очарование_uM2PCdw.jpg",
+      "price": "2000.00",
+      "occasion": "wedding",
+      "essence_bouquet": "Очарование – букет, созданный для вдохновения и красоты. Он подчеркивает естественное обаяние и изысканность момента."
+    }
+  },
+  {
+    "model": "shop.bouquet",
+    "pk": 12,
+    "fields": {
+      "name": "Летний сад",
+      "description": "Лиатрис — 4 шт\r\nХризантема Сантини — 3 шт\r\nТриферн — 1 шт\r\nЭустома — 4 шт\r\nГербера — 2 шт\r\nАспедистра — 3 шт\r\nБожьи коровки — 2 шт\r\nУпаковка: Тюль\r\nЛента",
+      "image": "bouquets/Летний_сад_smacQ88.jpg",
+      "price": "1900.00",
+      "occasion": "wedding",
+      "essence_bouquet": "Летний сад – воспоминание о теплых днях, полном цветущих растений, свежего воздуха и умиротворения."
+    }
+  },
+  {
+    "model": "shop.bouquet",
+    "pk": 19,
+    "fields": {
+      "name": "Знания и успех",
+      "description": "Лиатрис — 4 шт\r\nХризантема Сантини — 3 шт\r\nТриферн — 2 шт\r\nЭустома — 5 шт\r\nГербера — 2 шт\r\nАспедистра — 1 шт\r\nБожьи коровки — 2 шт\r\nУпаковка: Яркая клетчатая бумага\r\nЛента",
+      "image": "bouquets/Знания_и_успех_vJWnZK5.jpg",
+      "price": "3400.00",
+      "occasion": "school",
+      "essence_bouquet": "Знания и успех – символ стремления к новым вершинам, мудрости и достижений. Цветы в этом букете словно открытая книга знаний."
+    }
+  },
+  {
+    "model": "shop.bouquet",
+    "pk": 20,
+    "fields": {
+      "name": "Уроки радости",
+      "description": "Лиатрис — 3 шт\r\nХризантема Сантини — 5 шт\r\nТриферн — 1 шт\r\nЭустома — 3 шт\r\nГербера — 4 шт\r\nАспедистра — 2 шт\r\nБожьи коровки — 1 шт\r\nУпаковка: Цветной фоамиран\r\nЛента",
+      "image": "bouquets/Уроки_радости_Bb1qegL.jpg",
+      "price": "3100.00",
+      "occasion": "school",
+      "essence_bouquet": "Уроки радости – букет, напоминающий о важности радоваться жизни и находить счастье в простых моментах."
+    }
+  },
+  {
+    "model": "shop.bouquet",
+    "pk": 21,
+    "fields": {
+      "name": "Цветные знания",
+      "description": "Лиатрис — 2 шт\r\nХризантема Сантини — 4 шт\r\nТриферн — 2 шт\r\nЭустома — 4 шт\r\nГербера — 3 шт\r\nАспедистра — 2 шт\r\nБожьи коровки — 1 шт\r\nУпаковка: Картонная коробка\r\nЛента",
+      "image": "bouquets/Цветные_знания_I8lPBS5.jpg",
+      "price": "3150.00",
+      "occasion": "school",
+      "essence_bouquet": "Цветные знания – символ креативности, открытого мышления и стремления к новым открытиям."
+    }
+  },
+  {
+    "model": "shop.bouquet",
+    "pk": 22,
+    "fields": {
+      "name": "Успех на горизонте",
+      "description": "Лиатрис — 3 шт\r\nХризантема Сантини — 2 шт\r\nТриферн — 3 шт\r\nЭустома — 2 шт\r\nГербера — 4 шт\r\nАспедистра — 3 шт\r\nБожьи коровки — 2 шт\r\nУпаковка: Прозрачная пленка с мотивом\r\nЛента",
+      "image": "bouquets/Успех_на_горизонте_lx5Pb5c.jpg",
+      "price": "1850.00",
+      "occasion": "school",
+      "essence_bouquet": "Успех на горизонте – букет вдохновения, помогающий увидеть перспективы и идти к своей мечте."
+    }
+  },
+  {
+    "model": "shop.bouquet",
+    "pk": 23,
+    "fields": {
+      "name": "Новое начало",
+      "description": "Лиатрис — 4 шт\r\nХризантема Сантини — 5 шт\r\nТриферн — 2 шт\r\nЭустома — 3 шт\r\nГербера — 3 шт\r\nАспедистра — 2 шт\r\nБожьи коровки — 1 шт\r\nУпаковка: Тюль с кружевами\r\nЛента",
+      "image": "bouquets/Новое_начало_j3erYdl.jpeg",
+      "price": "3300.00",
+      "occasion": "school",
+      "essence_bouquet": "Новое начало – свежесть перемен, надежда и возможность начать с чистого листа."
+    }
+  },
+  {
+    "model": "shop.bouquet",
+    "pk": 24,
+    "fields": {
+      "name": "Вечерняя гармония",
+      "description": "Красные розы — 6 шт\r\nЛилия — 2 шт (белая)\r\nГипсофила — 3 веточки\r\ngreenery (зелень) — 3 шт\r\nУпаковка: Черная бархатная бумага\r\nЛента: Черная",
+      "image": "bouquets/Вечерняя_гармония_ZhVF7RR.jpg",
+      "price": "4100.00",
+      "occasion": "no_reason",
+      "essence_bouquet": "Вечерняя гармония – умиротворение, спокойствие и красота заходящего солнца, отраженная в цветах."
+    }
+  },
+  {
+    "model": "shop.bouquet",
+    "pk": 25,
+    "fields": {
+      "name": "Нежная симфония",
+      "description": "Пионы — 3 шт (розовые)\r\nЭустома — 4 шт (белая)\r\nЛиатрис — 2 шт\r\ngreenery (зелень) — 4 шт\r\nУпаковка: Мягкий тюль\r\nЛента: Розовая",
+      "image": "bouquets/Нежная_симфония_3j8RPMh.jpg",
+      "price": "2700.00",
+      "occasion": "no_reason",
+      "essence_bouquet": "Нежная симфония – гармония тонких оттенков и утонченных линий, создающих мелодию эмоций."
+    }
+  },
+  {
+    "model": "shop.bouquet",
+    "pk": 26,
+    "fields": {
+      "name": "Осенний эссенс",
+      "description": "Описание:\r\nЗолотистые астры — 4 шт\r\nХризантема — 5 шт (оранжевая)\r\nЕловые шишки — 3 шт\r\ngreenery (зелень) — 3 шт\r\nУпаковка: Коричневая бумага\r\nЛента: Оранжевая",
+      "image": "bouquets/Осенний_эссенс_pkUKkgJ.jpg",
+      "price": "3600.00",
+      "occasion": "no_reason",
+      "essence_bouquet": "Осенний эссенс – богатство осенней палитры, уют и теплота, как в золотой октябрьский день."
+    }
+  },
+  {
+    "model": "shop.bouquet",
+    "pk": 27,
+    "fields": {
+      "name": "Летнее напоминание",
+      "description": "Гербера — 5 шт (разноцветные)\r\nАлиссум — 2 веточки\r\nРомашки — 5 шт\r\ngreenery (зелень) — 3 шт\r\nУпаковка: Прозрачная пленка\r\nЛента: Цветная",
+      "image": "bouquets/Летнее_напоминание_8EDB6lR.jpg",
+      "price": "4950.00",
+      "occasion": "no_reason",
+      "essence_bouquet": "Летнее напоминание – букет, который сохраняет атмосферу теплых дней даже в холодное время года."
+    }
+  },
+  {
+    "model": "shop.bouquet",
+    "pk": 28,
+    "fields": {
+      "name": "Летнее солнце",
+      "description": "Розы — 5 шт (желтые)\r\nЛаванда — 3 веточки\r\nГипсофила — 4 веточки\r\ngreenery (зелень) — 2 шт\r\nУпаковка: Светлая крафт-бумага\r\nЛента: Желтая",
+      "image": "bouquets/Летнее_солнце_h7zjmrH.jpg",
+      "price": "4000.00",
+      "occasion": "no_reason",
+      "essence_bouquet": "Летнее солнце – символ беззаботного счастья, ярких эмоций и теплых воспоминаний."
+    }
+  },
+  {
+    "model": "shop.order",
+    "pk": 1,
+    "fields": {
+      "customer": 1,
+      "bouquet": 7,
+      "address": "Валерия Гаврилина 66",
+      "delivery_time": "2025-03-26T20:00:00Z",
+      "status": "new",
+      "created_at": "2025-03-25T17:12:42.019Z"
+    }
+  },
+  {
+    "model": "shop.order",
+    "pk": 2,
+    "fields": {
+      "customer": 2,
+      "bouquet": 5,
+      "address": "броневой 15",
+      "delivery_time": "2025-04-12T18:00:00Z",
+      "status": "new",
+      "created_at": "2025-03-25T19:01:52.256Z"
+    }
+  },
+  {
+    "model": "shop.order",
+    "pk": 3,
+    "fields": {
+      "customer": 2,
+      "bouquet": 28,
+      "address": "броневой 15",
+      "delivery_time": "2025-03-05T16:00:00Z",
+      "status": "new",
+      "created_at": "2025-03-26T08:30:39.259Z"
+    }
+  },
+  {
+    "model": "shop.order",
+    "pk": 5,
+    "fields": {
+      "customer": 2,
+      "bouquet": 27,
+      "address": "броневор 14",
+      "delivery_time": "2000-12-12T16:00:00Z",
+      "status": "new",
+      "created_at": "2025-03-26T09:17:24.391Z"
+    }
+  },
+  {
+    "model": "shop.order",
+    "pk": 6,
+    "fields": {
+      "customer": 2,
+      "bouquet": 28,
+      "address": "броневой 10",
+      "delivery_time": "2010-12-12T14:00:00Z",
+      "status": "new",
+      "created_at": "2025-03-26T09:24:09.365Z"
+    }
+  },
+  {
+    "model": "shop.order",
+    "pk": 7,
+    "fields": {
+      "customer": 2,
+      "bouquet": 28,
+      "address": "Одоевского 3",
+      "delivery_time": "2024-10-10T16:00:00Z",
+      "status": "new",
+      "created_at": "2025-03-26T12:54:24.298Z"
+    }
+  },
+  {
+    "model": "shop.order",
+    "pk": 8,
+    "fields": {
+      "customer": 2,
+      "bouquet": 12,
+      "address": "броневой 12",
+      "delivery_time": "2010-10-10T13:00:00Z",
+      "status": "new",
+      "created_at": "2025-03-26T13:20:38.096Z"
+    }
+  },
+  {
+    "model": "shop.order",
+    "pk": 9,
+    "fields": {
+      "customer": 2,
+      "bouquet": 12,
+      "address": "одоевского 3",
+      "delivery_time": "2010-10-10T13:00:00Z",
+      "status": "new",
+      "created_at": "2025-03-26T13:26:46.139Z"
+    }
+  },
+  {
+    "model": "shop.order",
+    "pk": 10,
+    "fields": {
+      "customer": 2,
+      "bouquet": 12,
+      "address": "одоевского 3",
+      "delivery_time": "2010-10-10T13:00:00Z",
+      "status": "new",
+      "created_at": "2025-03-26T13:27:31.113Z"
+    }
+  },
+  {
+    "model": "shop.order",
+    "pk": 11,
+    "fields": {
+      "customer": 2,
+      "bouquet": 22,
+      "address": "Броневой 15",
+      "delivery_time": "2025-12-10T14:00:00Z",
+      "status": "new",
+      "created_at": "2025-03-26T13:43:59.653Z"
+    }
+  },
+  {
+    "model": "shop.order",
+    "pk": 12,
+    "fields": {
+      "customer": 2,
+      "bouquet": 3,
+      "address": "одоевского 3",
+      "delivery_time": "2010-10-10T13:00:00Z",
+      "status": "new",
+      "created_at": "2025-03-26T14:20:04.566Z"
+    }
+  },
+  {
+    "model": "shop.order",
+    "pk": 13,
+    "fields": {
+      "customer": 3,
+      "bouquet": 22,
+      "address": "Улица Пушкина, дом Колотушкина",
+      "delivery_time": "2025-03-17T00:00:00Z",
+      "status": "new",
+      "created_at": "2025-03-26T17:28:47.676Z"
+    }
+  },
+  {
+    "model": "shop.order",
+    "pk": 14,
+    "fields": {
+      "customer": 1,
+      "bouquet": 5,
+      "address": "Кремель",
+      "delivery_time": "2025-03-28T08:00:00Z",
+      "status": "new",
+      "created_at": "2025-03-26T20:17:56.764Z"
+    }
+  },
+  {
+    "model": "shop.order",
+    "pk": 15,
+    "fields": {
+      "customer": 1,
+      "bouquet": 3,
+      "address": "Спб",
+      "delivery_time": "2026-06-26T13:00:00Z",
+      "status": "new",
+      "created_at": "2025-03-26T20:19:33.577Z"
+    }
+  },
+  {
+    "model": "shop.order",
+    "pk": 16,
+    "fields": {
+      "customer": 1,
+      "bouquet": 3,
+      "address": "Питер",
+      "delivery_time": "2025-04-28T22:00:00Z",
+      "status": "new",
+      "created_at": "2025-03-26T20:20:46.937Z"
+    }
+  },
+  {
+    "model": "shop.order",
+    "pk": 17,
+    "fields": {
+      "customer": 1,
+      "bouquet": 28,
+      "address": "Офис",
+      "delivery_time": "2025-03-29T00:00:00Z",
+      "status": "new",
+      "created_at": "2025-03-26T20:23:05.333Z"
+    }
+  },
+  {
+    "model": "shop.order",
+    "pk": 18,
+    "fields": {
+      "customer": 1,
+      "bouquet": 28,
+      "address": "Cg,",
+      "delivery_time": "2025-03-29T23:00:00Z",
+      "status": "new",
+      "created_at": "2025-03-26T20:25:30.771Z"
+    }
+  },
+  {
+    "model": "shop.order",
+    "pk": 19,
+    "fields": {
+      "customer": 1,
+      "bouquet": 7,
+      "address": "SpB",
+      "delivery_time": "2025-05-11T18:39:00Z",
+      "status": "new",
+      "created_at": "2025-03-26T20:42:19.504Z"
+    }
+  },
+  {
+    "model": "shop.statistics",
+    "pk": 1,
+    "fields": {
+      "customer_name": 1,
+      "bouquet_name": 2,
+      "quantity": 1,
+      "order_date": "2025-03-26T13:18:17.261Z"
+    }
+  },
+  {
+    "model": "shop.statistics",
+    "pk": 2,
+    "fields": {
+      "customer_name": 2,
+      "bouquet_name": 12,
+      "quantity": 1,
+      "order_date": "2025-03-26T13:26:46.173Z"
+    }
+  },
+  {
+    "model": "shop.statistics",
+    "pk": 3,
+    "fields": {
+      "customer_name": 2,
+      "bouquet_name": 12,
+      "quantity": 1,
+      "order_date": "2025-03-26T13:27:31.152Z"
+    }
+  },
+  {
+    "model": "shop.statistics",
+    "pk": 4,
+    "fields": {
+      "customer_name": 2,
+      "bouquet_name": 22,
+      "quantity": 1,
+      "order_date": "2025-03-26T13:43:59.683Z"
+    }
+  },
+  {
+    "model": "shop.statistics",
+    "pk": 5,
+    "fields": {
+      "customer_name": 2,
+      "bouquet_name": 3,
+      "quantity": 1,
+      "order_date": "2025-03-26T14:20:04.596Z"
+    }
+  },
+  {
+    "model": "shop.statistics",
+    "pk": 6,
+    "fields": {
+      "customer_name": 3,
+      "bouquet_name": 22,
+      "quantity": 1,
+      "order_date": "2025-03-26T17:28:47.685Z"
+    }
+  },
+  {
+    "model": "shop.statistics",
+    "pk": 7,
+    "fields": {
+      "customer_name": 1,
+      "bouquet_name": 5,
+      "quantity": 1,
+      "order_date": "2025-03-26T20:17:56.769Z"
+    }
+  },
+  {
+    "model": "shop.statistics",
+    "pk": 8,
+    "fields": {
+      "customer_name": 1,
+      "bouquet_name": 3,
+      "quantity": 1,
+      "order_date": "2025-03-26T20:19:33.586Z"
+    }
+  },
+  {
+    "model": "shop.statistics",
+    "pk": 9,
+    "fields": {
+      "customer_name": 1,
+      "bouquet_name": 3,
+      "quantity": 1,
+      "order_date": "2025-03-26T20:20:46.946Z"
+    }
+  },
+  {
+    "model": "shop.statistics",
+    "pk": 10,
+    "fields": {
+      "customer_name": 1,
+      "bouquet_name": 28,
+      "quantity": 1,
+      "order_date": "2025-03-26T20:23:05.333Z"
+    }
+  },
+  {
+    "model": "shop.statistics",
+    "pk": 11,
+    "fields": {
+      "customer_name": 1,
+      "bouquet_name": 28,
+      "quantity": 1,
+      "order_date": "2025-03-26T20:25:30.775Z"
+    }
+  },
+  {
+    "model": "shop.statistics",
+    "pk": 12,
+    "fields": {
+      "customer_name": 1,
+      "bouquet_name": 7,
+      "quantity": 1,
+      "order_date": "2025-03-26T20:42:19.513Z"
+    }
+  },
+  {
+    "model": "shop.consultation",
+    "pk": 1,
+    "fields": {
+      "customer_name": "Аня",
+      "phone": "375299930583",
+      "created_at": "2025-03-26T14:01:07.970Z"
+    }
+  },
+  {
+    "model": "shop.consultation",
+    "pk": 2,
+    "fields": {
+      "customer_name": "Аня",
+      "phone": "375291927929",
+      "created_at": "2025-03-26T14:01:53.267Z"
+    }
+  },
+  {
+    "model": "shop.consultation",
+    "pk": 3,
+    "fields": {
+      "customer_name": "аня",
+      "phone": "375291927929",
+      "created_at": "2025-03-26T14:21:07.480Z"
+    }
+  },
+  {
+    "model": "shop.consultation",
+    "pk": 4,
+    "fields": {
+      "customer_name": "Артем",
+      "phone": "8-998-989-89-98",
+      "created_at": "2025-03-26T19:37:33.805Z"
+    }
+  }
+]
