@@ -4,5 +4,6 @@ python-dotenv==1.0.1
 aiogram==3.19.0
 dateparser==1.2.1
 djangorestframework==3.15.2
-Pillow
-dj_database_url
+Pillow==9.5.0
+dj_database_url==0.5.0
+psycopg2==2.9.5
