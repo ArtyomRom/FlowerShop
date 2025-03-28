@@ -28,6 +28,7 @@ def get_select_price():
         [InlineKeyboardButton(text="~3000 руб.", callback_data="price_3000")],
         [InlineKeyboardButton(text="~4000 руб.", callback_data="price_4000")],
         [InlineKeyboardButton(text="~5000 руб.", callback_data="price_5000")],
+        [InlineKeyboardButton(text=">5000 руб.", callback_data="price_over5000")],
     ]
 
     return InlineKeyboardMarkup(inline_keyboard=buttons)

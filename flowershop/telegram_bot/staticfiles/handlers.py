@@ -134,18 +134,35 @@ async def handle_price_selection(callback: types.CallbackQuery, state: FSMContex
     user_data = await state.get_data()
     user_occasion = user_data.get("occasion")
 
-    if user_occasion and user_occasion not in ["wedding", "school"]:
-        # Если пользователь ввел свой повод
+    # Определяем фильтр по цене
+    if price_key == "over5000":
+        price_filter = {"price__gt": 5000}  # Все букеты дороже 5000 руб.
+    else:
+        price_filter = {"price__lte": int(price_key)}
+
+    # Фильтрация букетов
+
+    STANDARD_OCCASIONS = [
+        "birthday",
+        "wedding",
+        "school",
+        "no_reason",
+    ]  # Все стандартные поводы
+
+    if user_occasion in STANDARD_OCCASIONS:
+        # Фильтруем только по стандартному поводу
         bouquets = await sync_to_async(list)(
-            Bouquet.objects.filter(price__lte=price_key).exclude(
+            Bouquet.objects.filter(occasion=user_occasion, **price_filter)
+        )
+    elif user_occasion and user_occasion not in ["wedding", "school"]:
+        # Если пользователь ввел свой повод, исключаем школьные и свадебные букеты
+        bouquets = await sync_to_async(list)(
+            Bouquet.objects.filter(**price_filter).exclude(
                 occasion__in=["wedding", "school"]
             )
         )
     else:
-        # Если пользователь выбрал стандартный повод
-        bouquets = await sync_to_async(list)(
-            Bouquet.objects.filter(occasion=user_occasion, price__lte=price_key)
-        )
+        bouquets = []
 
     if not bouquets:
         await callback.message.answer(
@@ -155,16 +172,13 @@ async def handle_price_selection(callback: types.CallbackQuery, state: FSMContex
 
     # Отправка подходящих букетов
     for bouquet in bouquets:
-        text = (
-            f"🌸 *{bouquet.name}*\n{bouquet.description}\n💰 Цена: {bouquet.price} руб.\n✨*{bouquet.essence_bouquet}*"
-        )
+        text = f"🌸 *{bouquet.name}*\n{bouquet.description}\n💰 Цена: {bouquet.price} руб.\n✨*{bouquet.essence_bouquet}*"
         keyboard = InlineKeyboardMarkup(
             inline_keyboard=[
                 [
                     InlineKeyboardButton(
                         text="✅ Выбрать этот букет",
-                        callback_data=f"bouquet_{bouquet.id}"
-
+                        callback_data=f"bouquet_{bouquet.id}",
                     )
                 ]
             ]
@@ -188,19 +202,21 @@ async def handle_price_selection(callback: types.CallbackQuery, state: FSMContex
                 text, parse_mode="Markdown", reply_markup=keyboard
             )
 
-    keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [
-            InlineKeyboardButton(
-                text="🌸 Заказать консультацию", callback_data="consultation"
-            )
-        ],
-        [
-            InlineKeyboardButton(
-                text='Посмотреть всю коллекцию', callback_data="all_bouquet"
-            )
+    keyboard = InlineKeyboardMarkup(
+        inline_keyboard=[
+            [
+                InlineKeyboardButton(
+                    text="🌸 Заказать консультацию", callback_data="consultation"
+                )
+            ],
+            [
+                InlineKeyboardButton(
+                    text="Посмотреть всю коллекцию", callback_data="all_bouquet"
+                )
+            ],
         ]
-    ])
-    text = '*Хотите что-то еще более уникальное?*\nПодберите другой букет из нашей коллекции или закажите консультацию флориста'
+    )
+    text = "*Хотите что-то еще более уникальное?*\nПодберите другой букет из нашей коллекции или закажите консультацию флориста"
     await callback.message.answer(text, parse_mode="Markdown", reply_markup=keyboard)
     await callback.answer()
 
@@ -356,7 +372,9 @@ async def process_name(message: types.Message, state: FSMContext):
 async def process_address(message: types.Message, state: FSMContext):
     """Сохранение адреса и запрос даты/времени"""
     await state.update_data(address=message.text)
-    await message.answer("Спасибо! Теперь введите дату и время доставки (например, 10.04.2025 15:30):")
+    await message.answer(
+        "Спасибо! Теперь введите дату и время доставки (например, 10.04.2025 15:30):"
+    )
     await state.set_state(OrderState.waiting_for_delivery_time)
 
 
@@ -366,7 +384,8 @@ async def process_delivery_time(message: types.Message, state: FSMContext):
     # Проверяем, что указаны и дата, и время (например, "10.04.2025" → НЕТ времени)
     if len(delivery_time.split()) == 1:
         await message.answer(
-            "Пожалуйста, укажите не только дату, но и точное время доставки (например, 10.04.2025 15:30).")
+            "Пожалуйста, укажите не только дату, но и точное время доставки (например, 10.04.2025 15:30)."
+        )
         return
     parsed_date = dateparser.parse(message.text, languages=["ru"])
     await state.update_data(delivery_time=parsed_date)
