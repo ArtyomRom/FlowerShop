@@ -135,22 +135,18 @@ async def handle_price_selection(callback: types.CallbackQuery, state: FSMContex
     user_occasion = user_data.get("occasion")
 
     # Определяем фильтр по цене
-    if price_key == "over5000":
-        price_filter = {"price__gt": 5000}  # Все букеты дороже 5000 руб.
+    if price_key == "nometter":
+        price_filter = {}  # Без фильтрации по цене
+    elif price_key == "over2000":
+        price_filter = {"price__gt": 2000}  # Все букеты дороже 2000 руб.
     else:
         price_filter = {"price__lte": int(price_key)}
 
     # Фильтрация букетов
-
-    STANDARD_OCCASIONS = [
-        "birthday",
-        "wedding",
-        "school",
-        "no_reason",
-    ]  # Все стандартные поводы
+    STANDARD_OCCASIONS = ["birthday", "wedding", "school", "no_reason"]
 
     if user_occasion in STANDARD_OCCASIONS:
-        # Фильтруем только по стандартному поводу
+        # Фильтруем букеты по стандартному поводу
         bouquets = await sync_to_async(list)(
             Bouquet.objects.filter(occasion=user_occasion, **price_filter)
         )
@@ -162,7 +158,8 @@ async def handle_price_selection(callback: types.CallbackQuery, state: FSMContex
             )
         )
     else:
-        bouquets = []
+        # Если повод не указан, выбираем все букеты без фильтрации
+        bouquets = await sync_to_async(list)(Bouquet.objects.filter(**price_filter))
 
     if not bouquets:
         await callback.message.answer(
@@ -276,11 +273,6 @@ async def handle_bouquet_selection(callback: types.CallbackQuery):
             [
                 InlineKeyboardButton(
                     text="🛒 Оформить заказ", callback_data=f"order_{bouquet.id}"
-                )
-            ],
-            [
-                InlineKeyboardButton(
-                    text="🌸 Заказать консультацию", callback_data="consultation"
                 )
             ],
         ]

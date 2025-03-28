@@ -24,11 +24,11 @@ def get_occasion_keyboard():
 def get_select_price():
     """Генерирует inline-клавиатуру с выбором цены"""
     buttons = [
+        [InlineKeyboardButton(text="~500 руб.", callback_data="price_500")],
+        [InlineKeyboardButton(text="~1000 руб.", callback_data="price_1000")],
         [InlineKeyboardButton(text="~2000 руб.", callback_data="price_2000")],
-        [InlineKeyboardButton(text="~3000 руб.", callback_data="price_3000")],
-        [InlineKeyboardButton(text="~4000 руб.", callback_data="price_4000")],
-        [InlineKeyboardButton(text="~5000 руб.", callback_data="price_5000")],
-        [InlineKeyboardButton(text=">5000 руб.", callback_data="price_over5000")],
+        [InlineKeyboardButton(text=">2000 руб.", callback_data="price_over2000")],
+        [InlineKeyboardButton(text="Неважно", callback_data="price_nometter")],
     ]
 
     return InlineKeyboardMarkup(inline_keyboard=buttons)
