@@ -1,7 +1,11 @@
 import os
 
+
 import dateparser
 from aiogram import Router, types
+
+from aiogram import Router, types, Bot
+
 from aiogram.filters import CommandStart
 from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import State, StatesGroup
@@ -10,8 +14,17 @@ from asgiref.sync import sync_to_async
 from shop.models import Bouquet, Customer, Order, Statistics, Consultation
 from telegram_bot.staticfiles import keyboards
 
-router = Router()
 
+from aiogram.fsm.context import FSMContext
+from aiogram.fsm.state import State, StatesGroup
+import dateparser
+from dotenv import load_dotenv
+
+
+router = Router()
+load_dotenv()
+TOKEN = os.getenv("TOKEN_BOT")
+bot = Bot(token=TOKEN)
 
 class CustomOccasionState(StatesGroup):
     waiting_for_custom_occasion = State()
@@ -417,5 +430,19 @@ async def process_phone(message: types.Message, state: FSMContext):
 
     await message.answer(
         f"✅ Ваш заказ оформлен!\n💐 Букет: {bouquet.name}\n📦 Адрес: {user_data['address']}\n🕒 Время доставки: {user_data['delivery_time']}\n📱 Телефон: {message.text}"
+    )
+
+    # Уведомление для курьера
+    courier_chat_id = os.environ['COURIER_CHAT_ID']
+    await bot.send_message(
+        courier_chat_id,
+        f"📦 Новый заказ!\n👤 Клиент: {user.name}\n💐 Букет: {bouquet.name}\n📦 Адрес: {user_data['address']}\n🕒 Время доставки: {user_data['delivery_time']}\n📱 Телефон: {message.text}"
+    )
+
+    # Уведомление для менеджера
+    manager_chat_id = os.environ['MANAGER_CHAT_ID']
+    await bot.send_message(
+        manager_chat_id,
+        f"📦 Новый заказ!\n👤 Клиент: {user.name}\n💐 Букет: {bouquet.name}\n📦 Адрес: {user_data['address']}\n🕒 Время доставки: {user_data['delivery_time']}\n📱 Телефон: {message.text}"
     )
     await state.clear()
