@@ -1,1 +1,2 @@
 worker: python manage.py start_bot
+web: gunicorn flowershop.wsgi:application --bind 0.0.0.0:$PORT

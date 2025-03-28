@@ -14,6 +14,8 @@ from pathlib import Path
 import os
 import dj_database_url
 
+PORT = os.getenv("PORT", "10000")
+
 DATABASES = {
     'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))
 }
