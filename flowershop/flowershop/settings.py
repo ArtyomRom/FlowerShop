@@ -30,7 +30,7 @@ SECRET_KEY = "django-insecure-zxepi6kd31ez^jj-+gsdh-x7a31y02(t8%+kwls%aufn7wn^+e
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["flowershop-mpt7.onrender.com"]
+ALLOWED_HOSTS = ["flowershop-mpt7.onrender.com", '127.0.0.1:8000', '127.0.0.1']
 
 
 # Application definition
