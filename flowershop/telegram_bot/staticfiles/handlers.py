@@ -106,6 +106,14 @@ async def process_contact_info(message: types.Message, state: FSMContext):
     await message.answer(
         f"📝 Ваш запрос на консультацию успешно отправлен!\nИмя: {consultation.customer_name}\nТелефон: {consultation.phone}"
     )
+    keyboard = InlineKeyboardMarkup(
+        inline_keyboard=[
+            [InlineKeyboardButton(text="Оформить повторный заказ", callback_data="repeat_order")]
+        ]
+    )
+
+    await message.answer("Хотите оформить повторный заказ?", reply_markup=keyboard)
+
     await state.clear()
 
 
@@ -387,14 +395,28 @@ async def process_address(message: types.Message, state: FSMContext):
 @router.message(OrderState.waiting_for_delivery_time)
 async def process_delivery_time(message: types.Message, state: FSMContext):
     delivery_time = message.text.strip()
-    # Проверяем, что указаны и дата, и время (например, "10.04.2025" → НЕТ времени)
+
+    # Проверяем, что указаны и дата, и время
     if len(delivery_time.split()) == 1:
         await message.answer(
             "Пожалуйста, укажите не только дату, но и точное время доставки (например, 10.04.2025 15:30)."
         )
-        return
-    parsed_date = dateparser.parse(message.text, languages=["ru"])
+        return  # Состояние не меняем, бот ждёт новый ввод
+
+    # Пытаемся распарсить дату и время
+    parsed_date = dateparser.parse(delivery_time, languages=["ru"])
+
+    # Если не удалось распарсить дату
+    if not parsed_date:
+        await message.answer(
+            "Дата или время указаны неверно. Пожалуйста, введите дату и время в формате: 10.04.2025 15:30."
+        )
+        return  # Состояние остаётся OrderState.waiting_for_delivery_time
+
+    # Если всё хорошо, сохраняем дату и время
     await state.update_data(delivery_time=parsed_date)
+
+    # Переходим к следующему шагу
     await message.answer("Спасибо! Теперь введите ваш номер телефона:")
     await state.set_state(OrderState.waiting_for_phone)
 
@@ -446,6 +468,22 @@ async def process_phone(message: types.Message, state: FSMContext):
     )
 
     asyncio.create_task(send_order_notifications(user, bouquet, user_data, message.text))
+    keyboard = InlineKeyboardMarkup(
+        inline_keyboard=[
+            [InlineKeyboardButton(text="Оформить повторный заказ", callback_data="repeat_order")]
+        ]
+    )
+    await message.answer("Ваш заказ оформлен. Хотите оформить повторный заказ?", reply_markup=keyboard)
     await state.clear()
 
 
+@router.callback_query(lambda c: c.data == "repeat_order")
+async def repeat_order(callback_query: types.CallbackQuery, state: FSMContext):
+    # Очистка всех данных, связанных с состоянием
+    await state.set_data({})  # Это сбросит все данные состояния
+
+    # Логика для начала нового заказа
+    await callback_query.message.answer("Вы можете выбрать новый букет и оформить заказ снова.")
+
+    # Отправляем информацию для повторного выбора
+    await callback_query.message.answer("Выберите букет:", reply_markup=keyboards.get_occasion_keyboard())
