@@ -2,7 +2,7 @@ import os
 
 
 import dateparser
-from aiogram import Router, types
+from aiogram import Router, types, Dispatcher
 
 from aiogram import Router, types, Bot
 
@@ -13,6 +13,7 @@ from aiogram.types import FSInputFile, InlineKeyboardMarkup, InlineKeyboardButto
 from asgiref.sync import sync_to_async
 from shop.models import Bouquet, Customer, Order, Statistics, Consultation
 from telegram_bot.staticfiles import keyboards
+import asyncio
 
 
 from aiogram.fsm.context import FSMContext
@@ -20,11 +21,11 @@ from aiogram.fsm.state import State, StatesGroup
 import dateparser
 from dotenv import load_dotenv
 
-
 router = Router()
 load_dotenv()
 TOKEN = os.getenv("TOKEN_BOT")
 bot = Bot(token=TOKEN)
+
 
 class CustomOccasionState(StatesGroup):
     waiting_for_custom_occasion = State()
@@ -405,12 +406,32 @@ async def process_delivery_time(message: types.Message, state: FSMContext):
     await message.answer("Спасибо! Теперь введите ваш номер телефона:")
     await state.set_state(OrderState.waiting_for_phone)
 
+async def send_order_notifications(user, bouquet, user_data, phone):
+    """Отправка уведомлений курьеру и менеджеру"""
+    courier_chat_id = os.getenv("COURIER_CHAT_ID")
+    manager_chat_id = os.getenv("MANAGER_CHAT_ID")
+    text = (
+            f"📦 Новый заказ!\n"
+            f"👤 Клиент: {user.name}\n"
+            f"💐 Букет: {bouquet.name}\n"
+            f"📦 Адрес: {user_data['address']}\n"
+            f"🕒 Время доставки: {user_data['delivery_time']}\n"
+            f"📱 Телефон: {phone}"
+        )
+
+        # Отправляем уведомления
+    await bot.send_message(chat_id=courier_chat_id, text=text)
+    await bot.send_message(chat_id=manager_chat_id, text=text)
+
 
 @router.message(OrderState.waiting_for_phone)
 async def process_phone(message: types.Message, state: FSMContext):
     """Сохранение номера телефона и финальное подтверждение заказа"""
     user_data = await state.get_data()
 
+    if "delivery_time" not in user_data or not user_data["delivery_time"]:
+        await message.answer("Ошибка: Время доставки не указано! Укажите время перед оформлением заказа.")
+        return
     user = await sync_to_async(Customer.objects.get)(id=user_data["user_id"])
     bouquet = await sync_to_async(Bouquet.objects.get)(id=user_data["bouquet_id"])
 
@@ -432,17 +453,7 @@ async def process_phone(message: types.Message, state: FSMContext):
         f"✅ Ваш заказ оформлен!\n💐 Букет: {bouquet.name}\n📦 Адрес: {user_data['address']}\n🕒 Время доставки: {user_data['delivery_time']}\n📱 Телефон: {message.text}"
     )
 
-    # Уведомление для курьера
-    courier_chat_id = os.environ['COURIER_CHAT_ID']
-    await bot.send_message(
-        courier_chat_id,
-        f"📦 Новый заказ!\n👤 Клиент: {user.name}\n💐 Букет: {bouquet.name}\n📦 Адрес: {user_data['address']}\n🕒 Время доставки: {user_data['delivery_time']}\n📱 Телефон: {message.text}"
-    )
-
-    # Уведомление для менеджера
-    manager_chat_id = os.environ['MANAGER_CHAT_ID']
-    await bot.send_message(
-        manager_chat_id,
-        f"📦 Новый заказ!\n👤 Клиент: {user.name}\n💐 Букет: {bouquet.name}\n📦 Адрес: {user_data['address']}\n🕒 Время доставки: {user_data['delivery_time']}\n📱 Телефон: {message.text}"
-    )
+    asyncio.create_task(send_order_notifications(user, bouquet, user_data, message.text))
     await state.clear()
+
+
