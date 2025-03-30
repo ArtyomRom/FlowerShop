@@ -95,7 +95,7 @@ DATABASES = {
         'NAME': 'flower_shop_database',
         'USER': 'flower_shop_admin',
         'PASSWORD': 'admin',
-        'HOST': '127.0.0.1',
+        'HOST': 'gondola.proxy.rlwy.net',
         'PORT': '5432',
     }
 }
