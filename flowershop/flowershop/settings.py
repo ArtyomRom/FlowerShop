@@ -32,7 +32,7 @@ SECRET_KEY = "django-insecure-zxepi6kd31ez^jj-+gsdh-x7a31y02(t8%+kwls%aufn7wn^+e
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["flowershop-mpt7.onrender.com", '127.0.0.1:8000', '127.0.0.1']
+ALLOWED_HOSTS = ["flowershop-mpt7.onrender.com", '127.0.0.1:8000', '127.0.0.1', 'FlowerShop.up.railway.app']
 
 
 # Application definition
@@ -134,8 +134,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = "static/"
 
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
