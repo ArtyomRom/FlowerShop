@@ -1,4 +1,4 @@
 web: gunicorn flowershop.wsgi:application --bind 0.0.0.0:$PORT
  
- # Запуск Telegram бота как фоновый процесс (Background Worker)
+# Запуск Telegram бота как фоновый процесс (Background Worker)
 worker: python manage.py start_bot 

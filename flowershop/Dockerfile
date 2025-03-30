@@ -12,7 +12,7 @@ RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
 # Создаем папку для статических файлов, если её нет
-RUN mkdir -p /app/staticfiles
+RUN mkdir -p /app/bot_tools
 
 # Сборка статики
 RUN python manage.py collectstatic --noinput
