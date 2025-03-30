@@ -1,3 +1,1 @@
 web: gunicorn flowershop.wsgi --bind 0.0.0.0:$PORT
-worker: python manage.py start_bot
-release: python manage.py migrate && python manage.py collectstatic --noinput
