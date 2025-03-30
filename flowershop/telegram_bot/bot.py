@@ -1,7 +1,7 @@
 import os
 from aiogram import Bot, Dispatcher
 from dotenv import load_dotenv
-from telegram_bot.staticfiles import handlers
+from telegram_bot.bot_tools import handlers
 # Загружаем переменные окружения
 load_dotenv()
 
@@ -14,7 +14,7 @@ bot = Bot(token=TOKEN)
 dp = Dispatcher()
 
 # Импортируем и регистрируем обработчики (если они есть)
-from telegram_bot.staticfiles import handlers
+from telegram_bot.bot_tools import handlers
 
 dp.include_router(handlers.router)  # Приветственное сообщение
 # dp.include_router(orders.router)  # Заказы

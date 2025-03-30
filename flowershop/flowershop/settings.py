@@ -43,10 +43,10 @@ INSTALLED_APPS = [
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
-    "django.contrib.bot_tools",
+    "django.contrib.staticfiles",
     "shop",
     "rest_framework",
-    "telegram_bot"
+    "telegram_bot",
 ]
 
 MIDDLEWARE = [
@@ -134,9 +134,17 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-
 STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / 'bot_tools'
+
+# Директория, где Django будет искать статические файлы
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
+
+# Директория, куда Django будет собирать статические файлы при команде collectstatic
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+BOT_FILES_DIR = os.path.join(BASE_DIR, 'bot_tools')
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 

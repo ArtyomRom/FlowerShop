@@ -12,7 +12,7 @@ from aiogram.fsm.state import State, StatesGroup
 from aiogram.types import FSInputFile, InlineKeyboardMarkup, InlineKeyboardButton
 from asgiref.sync import sync_to_async
 from shop.models import Bouquet, Customer, Order, Statistics, Consultation
-from telegram_bot.staticfiles import keyboards
+from telegram_bot.bot_tools import keyboards
 import asyncio
 
 
